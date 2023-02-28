@@ -9,9 +9,10 @@ public class SimpleRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        boolean testbool = true;
-        if (testbool == true) {
-            
+        for (int i=0; i<10; i++) {
+            for (int j=0; i<10; j++) {
+                if (false) break;
+            }
         }
 
         from("timer:foo?period=5000")
