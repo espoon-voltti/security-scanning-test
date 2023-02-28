@@ -9,6 +9,10 @@ public class SimpleRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
+        boolean testbool = true;
+        if (testbool == true) {
+            
+        }
 
         from("timer:foo?period=5000")
             .routeId("SimpleRoute.timer")
