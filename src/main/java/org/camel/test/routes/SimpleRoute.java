@@ -1,5 +1,7 @@
 package org.camel.test.routes;
 
+import java.util.regex.Pattern;
+
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
@@ -18,5 +20,8 @@ public class SimpleRoute extends RouteBuilder {
         from("timer:foo?period=5000")
             .routeId("SimpleRoute.timer")
             .log("test");
+    }
+    public static boolean is_valid_hex_color(String color) {
+        return Pattern.matches("#[0-9a-fA-f]{6}", color);
     }
 }
